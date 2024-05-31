@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+        button, input[type="submit"], input[type="text"], input[type="number"] {
+            font-size: larger;
+            border-radius: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Buy Tickets</h1>
+    <p>All fields required</p><br>
+
+    <form action="BuyTickets.jsp" method="POST">
+        <label for="tranID">Your transaction ID</label><br>
+        <input type="number" id="tranID" name="tranID" min="100" required><br>
+        <label for="eventID">The event ID</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <label for="tickets">Number of ticket</label><br>
+        <input type="text" id="tickets" name="tickets" required><br>
+        <label for="pay">Your Card Number</label><br>
+        <input type="text" id="pay" name="pay" required><br>
+
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/BuyerHomePage.html';">Go Back</button>
+    </form>
+</body>
+</html>

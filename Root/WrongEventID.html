@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+        button {
+            font-size: larger;
+            margin-top: 20px;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;                /* gap now is 20 fixed. */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EasyTicket</h1>
+    <h3>Please check your event ID(Even_ID invalid)</h3>
+    <div class="button-container">
+        <button onclick="window.location.href = 'http://localhost:8080/PlannerHomePage.html';">Go back</button>
+        <button onclick="window.location.href = 'http://localhost:8080/LogOut.jsp';">LogOut</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Log In</h1>
+
+    <form action="Login.jsp" method="POST">
+        <label for="userID">UserID:</label><br>
+        <input type="text" id="userID" name="userID" required><br>
+        <label for="pw">Password:</label><br>
+        <input type="password" id="pw" name="pw" required><br>
+
+        <br>
+        <label for="userType">Type of Account:</label><br>
+        <select id="userType" name="userType">
+            <option value="buyer">Buyer</option>
+            <option value="seller">Event Planner</option>
+        </select><br>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

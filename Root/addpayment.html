@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PAYMENT</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+        input[type="number"],
+        input[type="text"],
+        input[type="submit"],
+        button {
+            font-size: larger;
+            border-radius: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>ADD PAYMENT TYPE</h1>
+    <p>All fields required</p><br>
+
+    <form action="addpayment.jsp" method="POST">
+        <label>Your card Number (Debit or Credit card)</label><br>
+        <input type="number" id="cardNo" name="cardNo" placeholder="Enter Card Number" required><br>
+        <label>Name on Card</label><br>
+        <input type="text" id="cardName" name="cardName" placeholder="Enter Name on Card" required><br>
+        <label>Expiration Month on Card</label><br>
+        <input type="number" id="expMo" name="expMo" placeholder="Enter Expiry Month" required><br>
+        <label>Expiration Year on Card</label><br>
+        <input type="number" id="expYr" name="expYr" placeholder="Enter Expiry Year" required><br>
+        <label>Security Code</label><br>
+        <input type="number" id="code" name="code" placeholder="Enter Security Code" required><br>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp;
+        &nbsp;
+        <button onclick="window.location.href = 'http://localhost:8080/BuyerHomePage.html';">Go Back</button>
+    </form>
+</body>
+</html>

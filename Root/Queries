@@ -1,0 +1,80 @@
+CREATE TABLE `buyer` (
+  `userID` varchar(45) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`userID`),
+  UNIQUE KEY `userID_UNIQUE` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `eventplanner` (
+  `userID` varchar(45) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`userID`),
+  UNIQUE KEY `userID_UNIQUE` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `event` (
+  `eventID` int NOT NULL,
+  `eventName` varchar(200) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `date_and_time` datetime DEFAULT NULL,
+  `location` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`eventID`),
+  UNIQUE KEY `eventID_UNIQUE` (`eventID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `createevent` (
+  `EventPlannerUserID` varchar(45) NOT NULL,
+  `EventID` int NOT NULL,
+  PRIMARY KEY (`EventPlannerUserID`,`EventID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `cart` (
+  `cartID` varchar(45) DEFAULT NULL,
+  `eventID` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `card` (
+  `cardNo` bigint NOT NULL,
+  `userID` varchar(45) DEFAULT NULL,
+  `cardName` varchar(45) DEFAULT NULL,
+  `expMonth` int DEFAULT NULL,
+  `expYear` int DEFAULT NULL,
+  `securityCode` int DEFAULT NULL,
+  PRIMARY KEY (`cardNo`),
+  UNIQUE KEY `cardNo_UNIQUE` (`cardNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `hastickets` (
+  `userID` varchar(45) NOT NULL,
+  `eventID` int NOT NULL,
+  `tickets` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `tickets` (
+  `eventID` int NOT NULL,
+  `totalTickets` int DEFAULT NULL,
+  `remainingTickets` int DEFAULT NULL,
+  `price` int DEFAULT NULL,
+  PRIMARY KEY (`eventID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `transaction` (
+  `transactionID` int NOT NULL,
+  `eventID` int DEFAULT NULL,
+  `userID` varchar(45) DEFAULT NULL,
+  `tickets` int DEFAULT NULL,
+  `amount` int DEFAULT NULL,
+  PRIMARY KEY (`transactionID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `return` (
+  `returnID` int NOT NULL,
+  `eventID` int DEFAULT NULL,
+  `userID` varchar(45) DEFAULT NULL,
+  `tickets` int DEFAULT NULL,
+  PRIMARY KEY (`returnID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

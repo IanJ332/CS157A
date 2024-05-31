@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resell Tickets</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+        button {
+            font-size: larger;
+            margin-top: 20px;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            font-size: larger;
+            margin-top: 20px;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Re-Sell Tickets</h1>
+    <p>All fields required</p><br>
+
+    <form action="ReturnTickets.jsp" method="POST">
+        <label for="returnID">Return ID</label><br>
+        <input type="number" id="returnID" name="returnID" min="10000" required><br>
+        <label for="eventID">Event ID</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <label for="tickets">Number of  Tickets</label><br>
+        <input type="text" id="tickets" name="tickets" required><br>
+
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/BuyerHomePage.html';">Go Back</button>
+    </form>
+</body>
+</html>

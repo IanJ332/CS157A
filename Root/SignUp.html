@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        input[type="submit"],
+        button {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+
+        select {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 36px;">Sign Up</h1>
+    <p style="font-size: 24px;">All fields required</p><br>
+
+    <form action="SignUp.jsp" method="POST">
+        <label for="userID">UserID:</label><br>
+        <input type="text" id="userID" name="userID" required><br>
+        <label for="pw">Password:</label><br>
+        <input type="password" id="pw" name="pw" required><br>
+        <label for="name">Full name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required><br>
+
+        <label for="userType">Type of Account:</label>
+        <select id="userType" name="userType">
+            <option value="buyer">Buyer</option>
+            <option value="seller">Event Planner</option>
+        </select><br>
+
+        <br>
+        <input type="submit" value="Submit">
+        <button onclick="window.location.href = 'http://localhost:8080/FirstPage.html';">Back to Home</button>
+    </form>
+</body>
+</html>

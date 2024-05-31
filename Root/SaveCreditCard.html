@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Card Page</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border-radius: 5px;
+            padding: 5px;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"],
+        button {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Save Credit Card</h1>
+    <form>
+        <label for="cno">Card Number:</label><br>
+        <input type="text" id="cno" name="cno" value="Credit Card Numbers"><br>
+        <label for="month">Expiry Month:</label><br>
+        <input type="text" id="month" name="month" value="Month as numbers"><br>
+        <label for="year">Expiry Year:</label><br>
+        <input type="text" id="year" name="year" value="Enter year [EX: 2024]"><br>
+        <label for="cvv">Security Code:</label><br>
+        <input type="password" id="cvv" name="cvv"><br>
+        <label for="name">Name on card:</label><br>
+        <input type="text" id="name" name="name" value="Please enter your name on your card"><br>
+        <label for="zip">Zip Code:</label><br>
+        <input type="text" id="zip" name="zip" value="Please enter your zip code"><br><br>
+        <input type="submit" value="Save Card">
+        <button>Return to Home</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Event</title>
+    <style>
+        body {
+            font-size: larger;
+            color: black;
+            text-align: center;
+        }
+        button {
+            font-size: larger;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            font-size: larger;
+            margin-top: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        input[type="number"] {
+            border-radius: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Event</h1>
+    <p>All fields required</p><br>
+
+    <form action="DeleteEvent.jsp" method="POST">
+        <label for="eventID">The event ID</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+
+        <br>
+        <label>Before you submit please make sure you want to delete current event, and is not reversible.</label><br>
+        <input type="radio" id="userType" name="userType" value="yes" required>
+        <label for="yes">YES</label><br>
+        <input type="radio" id="userType" name="userType" value="no" required>
+        <label for="no">NO</label><br>
+
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/PlannerHomePage.html';">Go Back</button>
+    </form>
+</body>
+</html>

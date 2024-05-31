@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#0abab5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Event</title>
+    <style>
+        body {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+        button {
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 5px 10px;
+        }
+        input[type="text"], select {
+            font-size: 16px;
+            margin-top: 5px;
+            padding: 5px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="date"], input[type="time"] {
+            font-size: 16px;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 0;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Event</h1>
+    <p>Please ONLY fill in the area you want to CHANGE + specific Event_ID.</p><br>
+
+    <form action="EditEvent.jsp" method="POST">
+        <label for="eventID">Event ID</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <br>
+        <label for="eventName">Event name</label><br>
+        <input type="text" id="eventName" name="eventName"><br>
+        <label for="description">Event description</label><br>
+        <input type="text" id="description" name="description" size="50"><br>
+        <label for="date">Event date</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="time">Event time</label><br>
+        <input type="time" id="time" name="time"><br>
+        <label for="eventLoc">Event location</label><br>
+        <input type="text" id="eventLoc" name="eventLoc"><br>
+        <label for="tickets">Number of Tickets: </label><br>
+        <input type="text" id="tickets" name="tickets" required><br>
+        <label for="price">Price per Ticket: </label><br>
+        <input type="text" id="price" name="price" required><br>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/PlannerHomePage.html';">Go Back</button>
+    </form>
+</body>
+</html>
